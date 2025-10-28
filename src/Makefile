@@ -1,6 +1,6 @@
 # Define variables
 CC = gcc
-CFLAGS = -DLOCAL_STATE_DIR=\"/usr/local/var\" -Wall -g
+CFLAGS = -Wall -g
 LDFLAGS =
 LIBS =
 

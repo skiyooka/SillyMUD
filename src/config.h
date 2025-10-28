@@ -2,7 +2,7 @@
 /* config.h.in.  Generated from configure.ac by autoheader.  */
 
 /* Default location to look for game data files */
-#define DEFAULT_LIBDIR LOCAL_STATE_DIR "/sillymud"
+#define DEFAULT_LIBDIR "/sillymud"
 
 /* Define as 1 to allow for named groups */
 #define GROUP_NAMES 1
