@@ -28,7 +28,7 @@ void init_world(struct room_data *room_db[]) {
 }
 
 
-void destroy_hash_table(struct hash_header *ht, void (*gman) ()) {
+void destroy_hash_table(struct hash_header *ht, void (*gman)(void *)) {
   int i;
   struct hash_link *scan, *temp;
 

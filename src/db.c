@@ -3195,7 +3195,7 @@ int load() {
   return (0);
 }
 
-void gr() {
+void gr(int s) {
   return;
 }
 

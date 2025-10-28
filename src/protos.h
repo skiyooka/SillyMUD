@@ -268,7 +268,7 @@ int real_object(int virtual);
 int obj_room_count(int nr, struct room_data *rp);
 int str_len(char *buf);
 int load();
-void gr();
+void gr(int s);
 int workhours();
 void init_scripts();
 void reload_rooms();
@@ -411,7 +411,7 @@ void add_affects(struct char_data *ch, struct obj_data *o);
 
 void init_hash_table(struct hash_header *ht, int rec_size, int table_size);
 void init_world(struct room_data *room_db[]);
-void destroy_hash_table(struct hash_header *ht, void (*gman) ());
+void destroy_hash_table(struct hash_header *ht, void (*gman)(void *));
 void _hash_enter(struct hash_header *ht, int key, void *data);
 struct room_data *room_find(struct room_data *room_db[], int key);
 void *hash_find(struct hash_header *ht, int key);
