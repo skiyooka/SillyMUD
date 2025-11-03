@@ -878,7 +878,7 @@ void do_at(struct char_data *ch, char *argument,
   }
 
 
-  if (isdigit(*loc_str)) {
+  if (isdigit((int)(*loc_str))) {
     loc_nr = atoi(loc_str);
     if (NULL == real_roomp(loc_nr)) {
       send_to_char("No room exists with that number.\n\r", ch);
@@ -923,7 +923,7 @@ void do_goto(struct char_data *ch, char *argument,
              const char * UNUSED(cmd)) {
   char buf[MAX_INPUT_LENGTH];
   int loc_nr, location, i;
-  struct char_data *target_mob, *pers, *v;
+  struct char_data *target_mob, *pers, *v = NULL;
   struct obj_data *target_obj;
 
   if (IS_NPC(ch))
@@ -939,7 +939,7 @@ void do_goto(struct char_data *ch, char *argument,
     return;
   }
 
-  if (isdigit(*buf) && NULL == index(buf, '.')) {
+  if (isdigit((int)(*buf)) && NULL == index(buf, '.')) {
     loc_nr = atoi(buf);
     if (NULL == real_roomp(loc_nr)) {
       if (get_max_level(ch) < CREATOR || loc_nr < 0) {
@@ -1997,7 +1997,7 @@ void do_return(struct char_data *ch, char *UNUSED(argument),
 }
 
 void return_action(struct char_data *ch, int call_as_self) {
-  struct char_data *mob, *per;
+  struct char_data *mob = NULL, *per;
 
   if (get_max_level(ch) < LOW_IMMORTAL)
     if (ch->specials.fighting) {
@@ -2114,7 +2114,7 @@ void do_load(struct char_data *ch, char *argument,
   argument = one_argument(argument, type);
 
   only_argument(argument, num);
-  if (isdigit(*num))
+  if (isdigit((int)(*num)))
     number = atoi(num);
   else
     number = -1;
@@ -2346,13 +2346,13 @@ void do_purge(struct char_data *ch, char *argument,
           return;
         }
         argument = one_argument(argument, name);
-        if (!isdigit(*name)) {
+        if (!isdigit((int)(*name))) {
           send_to_char("purge room start [end]", ch);
           return;
         }
         range[0] = atoi(name);
         argument = one_argument(argument, name);
-        if (isdigit(*name))
+        if (isdigit((int)(*name)))
           range[1] = atoi(name);
         else
           range[1] = range[0];
@@ -2800,7 +2800,7 @@ void do_advance(struct char_data *ch, char *argument,
     return;
   }
   else {
-    if (!isdigit(*level)) {
+    if (!isdigit((int)(*level))) {
       send_to_char("Third argument must be a positive integer.\n\r", ch);
       return;
     }
@@ -3104,7 +3104,7 @@ void do_show(struct char_data *ch, char *argument,
              const char * UNUSED(cmd)) {
   int zone;
   char buf[MAX_STRING_LENGTH], zonenum[MAX_INPUT_LENGTH];
-  int bottom, top, topi;
+  int bottom = 0, top = 0, topi;
   struct string_block sb;
 
   if (IS_NPC(ch))

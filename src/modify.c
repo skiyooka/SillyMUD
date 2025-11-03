@@ -201,7 +201,7 @@ void quad_arg(char *arg, int *type, char *name, int *field, char *string) {
     return;
 
   /* string */
-  for (; isspace(*arg); arg++);
+  for (; isspace((int)(*arg)); arg++);
   for (; (*string = *arg) != '\0'; arg++, string++);
 
   return;
@@ -437,7 +437,7 @@ void bisect_arg(char *arg, int *field, char *string) {
     return;
 
   /* string */
-  for (; isspace(*arg); arg++);
+  for (; isspace((int)(*arg)); arg++);
   for (; (*string = *arg) != '\0'; arg++, string++);
 
   return;
@@ -805,7 +805,7 @@ char *one_word(char *argument, char *first_arg) {
   begin = 0;
 
   do {
-    for (; isspace(*(argument + begin)); begin++);
+    for (; isspace((int)(*(argument + begin))); begin++);
 
     if (*(argument + begin) == '\"') {  /* is it a quote */
 
@@ -938,7 +938,7 @@ void show_string(struct descriptor_data *d, char *input) {
       SEND_TO_Q(buffer, d);
 
       /* see if this is the end (or near the end) of the string */
-      for (chk = d->showstr_point; isspace(*chk); chk++);
+      for (chk = d->showstr_point; isspace((int)(*chk)); chk++);
       if (!*chk) {
         if (d->showstr_head) {
           free(d->showstr_head);

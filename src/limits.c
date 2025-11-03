@@ -521,7 +521,7 @@ void advance_level(struct char_data *ch, int class) {
 */
 
 void drop_level(struct char_data *ch, int class) {
-  int add_hp, lin_class;
+  int add_hp, lin_class = 0;
 
   extern struct wis_app_type wis_app[];
   extern struct con_app_type con_app[];
@@ -656,7 +656,7 @@ void set_title(struct char_data *ch) {
 void gain_exp(struct char_data *ch, int gain) {
   int i;
   char buf[256];
-  short chrace;
+  short chrace = 0;
   save_char(ch, AUTO_RENT);
 
   if (!IS_PC(ch) && ch->master && IS_AFFECTED(ch, AFF_CHARM)) {

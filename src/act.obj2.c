@@ -1188,7 +1188,7 @@ void do_remove(struct char_data *ch, char *argument,
                const char *UNUSED(cmd)) {
   char arg1[128], *T, *P;
   int Rem_List[20], Num_Equip;
-  struct obj_data *obj_object;
+  struct obj_data *obj_object = NULL;
   int j;
 
   one_argument(argument, arg1);
@@ -1217,7 +1217,7 @@ void do_remove(struct char_data *ch, char *argument,
       act("$n stops using $s equipment.", TRUE, ch, obj_object, 0, TO_ROOM);
       return;
     }
-    if (isdigit(arg1[0])) {
+    if (isdigit((int)(arg1[0]))) {
       /* PAT-PAT-PAT */
 
       /* Make a list of item numbers for stuff to remove */
@@ -1231,7 +1231,7 @@ void do_remove(struct char_data *ch, char *argument,
 
       T = arg1;
 
-      while (isdigit(*T) && (*T != '\0')) {
+      while (isdigit((int)(*T)) && (*T != '\0')) {
         P = T;
         if (strchr(T, ',')) {
           P = strchr(T, ',');

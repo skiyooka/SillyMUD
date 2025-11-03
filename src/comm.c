@@ -25,7 +25,6 @@
 #include <unistd.h>
 #include <stdarg.h>
 #include <syslog.h>
-
 #include "structs.h"
 #include "protos.h"
 #include "act.other.h"
@@ -167,7 +166,7 @@ int real_main(int argc, char **argv) {
   }
 
   if (pos < argc) {
-    if (!isdigit(*argv[pos])) {
+    if (!isdigit((int)(*argv[pos]))) {
       usage(argv);
     }
     else {
@@ -1002,7 +1001,7 @@ int process_input(struct descriptor_data *t) {
         }
       }
       else {
-        if (isascii(*(t->buf + i)) && isprint(*(t->buf + i))) {
+        if (isascii((int)(*(t->buf + i))) && isprint((int)(*(t->buf + i)))) {
           /* 
              trans char, double for '$' (printf)        
            */

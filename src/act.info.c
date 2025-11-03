@@ -1041,11 +1041,11 @@ void do_look(struct char_data *ch, char *argument,
 
     only_argument(argument, arg1);
 
-    if (0 == strn_cmp(arg1, "at", 2) && isspace(arg1[2])) {
+    if (0 == strn_cmp(arg1, "at", 2) && isspace((int)(arg1[2]))) {
       only_argument(argument + 3, arg2);
       keyword_no = 7;
     }
-    else if (0 == strn_cmp(arg1, "in", 2) && isspace(arg1[2])) {
+    else if (0 == strn_cmp(arg1, "in", 2) && isspace((int)(arg1[2]))) {
       only_argument(argument + 3, arg2);
       keyword_no = 6;
     }
@@ -1753,7 +1753,7 @@ void do_help(struct char_data *ch, char *argument,
   if (!ch->desc)
     return;
 
-  for (; isspace(*argument); argument++);
+  for (; isspace((int)(*argument)); argument++);
 
 
   if (*argument) {
@@ -2288,7 +2288,7 @@ void do_where(struct char_data *ch, char *argument,
     }
   }
 
-  if (isdigit(*name)) {
+  if (isdigit((int)(*name))) {
     nameonly = name;
     count = number = get_number(nameonly);
   }
@@ -2362,7 +2362,7 @@ void do_levels(struct char_data *ch, char *argument,
 **  get the class
 */
 
-  for (; isspace(*argument); argument++);
+  for (; isspace((int)(*argument)); argument++);
 
   if (!*argument) {
     int exp;
@@ -2661,7 +2661,7 @@ void do_spells(struct char_data *ch, char *argument,
 
   *buf = 0;
 
-  for (; isspace(*argument); argument++);
+  for (; isspace((int)(*argument)); argument++);
 
   if (!*argument) {
     for (i = 1, spl = 0; i <= MAX_EXIST_SPELL; i++, spl++) {

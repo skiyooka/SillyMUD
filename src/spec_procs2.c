@@ -3613,7 +3613,7 @@ long jackpot = 25;
 
 int slot_machine(struct char_data *ch, const char *cmd, char *UNUSED(arg),
                  struct obj_data *UNUSED(obj), int UNUSED(type)) {
-  int c, i[3], ind;
+  int c, i[3], ind = 0;
 
   if (!STREQ(cmd, "pull"))
     return (FALSE);

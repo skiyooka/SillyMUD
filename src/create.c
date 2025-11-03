@@ -424,7 +424,7 @@ void change_exit_dir(struct room_data *rp, struct char_data *ch, char *arg,
 
 void add_exit_to_room(struct room_data *rp, struct char_data *ch, char *arg,
                       int type) {
-  int update, dir, row, i = 0;
+  int update, dir = 0, row, i = 0;
 
   extern const char *exit_bits[];
 
@@ -514,7 +514,7 @@ void add_exit_to_room(struct room_data *rp, struct char_data *ch, char *arg,
 
 void change_exit_number(struct room_data *rp, struct char_data *ch, char *arg,
                         int type) {
-  int dir, update;
+  int dir = 0, update;
 
   switch (ch->specials.edit) {
   case CHANGE_NUMBER_NORTH:
@@ -579,7 +579,7 @@ void change_exit_number(struct room_data *rp, struct char_data *ch, char *arg,
 
 void change_key_number(struct room_data *rp, struct char_data *ch, char *arg,
                        int type) {
-  int dir, update;
+  int dir = 0, update;
 
   switch (ch->specials.edit) {
   case CHANGE_KEY_NORTH:

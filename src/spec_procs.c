@@ -189,7 +189,7 @@ int druid_guild_master(struct char_data *ch, const char *cmd, char *arg,
 int
 guildmaster(struct char_data *ch, const char *cmd, char *arg,
                 struct char_data *mob, int type, int class) {
-  int number, i, percent, class_level_ind, level_num, teacher;
+  int number, i, percent, class_level_ind, level_num = 0, teacher = 0;
   struct char_data *guildmaster;
   extern char *spells[];
   extern struct skill_data skill_info[MAX_SPL_LIST];
@@ -331,7 +331,7 @@ guildmaster(struct char_data *ch, const char *cmd, char *arg,
       return (TRUE);
     }                           /* if !arg */
 
-    for (; isspace(*arg); arg++);
+    for (; isspace((int)(*arg)); arg++);
     number = old_search_block(arg, 0, strlen(arg), spells, FALSE);
     if (number == -1) {
       send_to_char("You do not know of this skill...\n\r", ch);
@@ -937,8 +937,8 @@ int eric_johnson(struct char_data *ch, const char *cmd, char *UNUSED(arg),
       break;
     }
 
+    char *s = NULL;
     switch (state) {
-      char *s;
     case E_SLEEPING:
       if (time_info.hours > 9 && time_info.hours < 12) {
         wake_self(eric);
@@ -4973,7 +4973,7 @@ int soap(struct char_data *ch, const char *cmd, char *arg,
 
 int nodrop(struct char_data *ch, const char *cmd, char *arg,
            struct obj_data *UNUSED(tobj), int type) {
-  struct char_data *t;
+  struct char_data *t = NULL;
   struct obj_data *obj, *i;
   char buf[80], obj_name[80], vict_name[80], *name;
   bool do_all;

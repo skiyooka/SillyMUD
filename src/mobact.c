@@ -237,7 +237,7 @@ void mob_scavenge(struct char_data *ch) {
 
 void check_mobile_activity(int pulse) {
   register struct char_data *ch;
-  int tick, tm;
+  int tick = 0, tm;
 
   tm = pulse % PULSE_MOBILE;    /* this is dependent on P_M = 3*P_T */
 

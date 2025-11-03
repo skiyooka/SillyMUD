@@ -672,7 +672,7 @@ void do_give(struct char_data *ch, char *argument,
   char obj_name[200], vict_name[80], buf[MAX_BUF_LENGTH * 2];
   char arg[80], newarg[100];
   int amount, num, p, count;
-  struct char_data *vict;
+  struct char_data *vict = NULL;
   struct obj_data *obj;
 
   argument = one_argument(argument, obj_name);

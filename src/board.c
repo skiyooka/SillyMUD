@@ -174,7 +174,7 @@ void board_write_msg(struct char_data *ch, char *arg, int bnum) {
 
   /* skip blanks */
 
-  for (; isspace(*arg); arg++);
+  for (; isspace((int)(*arg)); arg++);
 
   if (!*arg) {
     send_to_char
@@ -228,7 +228,7 @@ int board_remove_msg(struct char_data *ch, char *arg, int bnum) {
 
   one_argument(arg, number);
 
-  if (!*number || !isdigit(*number))
+  if (!*number || !isdigit((int)(*number)))
     return (0);
 
   if (!(tmessage = atoi(number)))
@@ -402,7 +402,7 @@ int board_display_msg(struct char_data *ch, char *arg, int bnum) {
 
   one_argument(arg, number);
 
-  if (!*number || !isdigit(*number))
+  if (!*number || !isdigit((int)(*number)))
     return (0);
 
   if (!(tmessage = atoi(number)))

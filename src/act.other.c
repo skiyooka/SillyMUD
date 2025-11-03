@@ -38,7 +38,7 @@ void do_guard(struct char_data *ch, char *argument,
     return;
   }
 
-  for (; isspace(*argument); argument++);
+  for (; isspace((int)(*argument)); argument++);
 
   if (!*argument) {
     if (IS_SET(ch->specials.act, ACT_GUARDIAN)) {
@@ -163,7 +163,7 @@ void do_title(struct char_data *ch, char *argument,
   if (IS_NPC(ch) || !ch->desc)
     return;
 
-  for (; isspace(*argument); argument++);
+  for (; isspace((int)(*argument)); argument++);
 
   if (*argument) {
 
@@ -624,7 +624,7 @@ void do_practice(struct char_data *ch, char *arg, const char *cmd) {
   if (!ch->skills)
     return;
 
-  for (; isspace(*arg); arg++);
+  for (; isspace((int)(*arg)); arg++);
 
   if (!arg || !*arg) {
     send_to_char("You need to supply a class.", ch);
@@ -856,7 +856,7 @@ void do_idea(struct char_data *ch, char *argument,
   }
 
   /* skip whites */
-  for (; isspace(*argument); argument++);
+  for (; isspace((int)(*argument)); argument++);
 
   if (!*argument) {
     send_to_char("That doesn't sound like a good idea to me.. Sorry.\n\r", ch);
@@ -886,7 +886,7 @@ void do_typo(struct char_data *ch, char *argument,
   }
 
   /* skip whites */
-  for (; isspace(*argument); argument++);
+  for (; isspace((int)(*argument)); argument++);
 
   if (!*argument) {
     send_to_char("I beg your pardon?\n\r", ch);
@@ -916,7 +916,7 @@ void do_bug(struct char_data *ch, char *argument,
   }
 
   /* skip whites */
-  for (; isspace(*argument); argument++);
+  for (; isspace((int)(*argument)); argument++);
 
   if (!*argument) {
     send_to_char("Pardon?\n\r", ch);

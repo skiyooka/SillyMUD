@@ -688,7 +688,7 @@ struct obj_index_data *make_obj_indices(struct _index_data *base_idx,
 struct _index_data *generate_indices(FILE * fl, int *top) {
   int i = 0;
   long bc = 1500;
-  struct _index_data *index;
+  struct _index_data *index = NULL;
   char buf[82];
 
   rewind(fl);
@@ -1956,7 +1956,7 @@ void zone_update() {
 void reset_zone(int zone) {
   int cmd_no, last_cmd = 1;
   struct char_data *mob;
-  struct char_data *master;
+  struct char_data *master = NULL;
   struct obj_data *obj, *obj_to;
   struct room_data *rp;
   /*   FILE *fl; */

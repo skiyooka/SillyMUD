@@ -37,7 +37,7 @@ char *fname(char *namelist) {
   static char holder[30];
   register char *point;
 
-  for (point = holder; isalpha(*namelist); namelist++, point++)
+  for (point = holder; isalpha((int)(*namelist)); namelist++, point++)
     *point = *namelist;
 
   *point = '\0';
@@ -968,7 +968,7 @@ int get_number(char *name) {
     *ppos = '\0';
 
     for (cp = name; cp < ppos; cp++) {
-      if (!isdigit(*cp)) {
+      if (!isdigit((int)(*cp))) {
         *ppos = '.';
         return (0);
       }

@@ -1011,7 +1011,7 @@ void spell_animal_summon(byte level, struct char_data *ch,
                          struct obj_data *UNUSED(obj)) {
   struct affected_type af;
   struct char_data *mob;
-  int num, i;
+  int num = 0, i;
   struct room_data *rp;
 
   /* load in a monster of the correct type, determined by
