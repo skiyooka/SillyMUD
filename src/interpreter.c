@@ -12,7 +12,7 @@
 #endif
 #include <ctype.h>
 #include <stdio.h>
-#include <arpa/telnet.h>
+#include "telnet.h"
 #include <unistd.h>
 
 #include "protos.h"
@@ -184,10 +184,10 @@ void command_interpreter(struct char_data *ch, char *argument) {
   if (!*argument || *argument == '\n') {
     return;
   }
-  else if (!isalpha(*argument)) {
+  else if (!isalpha((int)(*argument))) {
     buf1[0] = *argument;
     buf1[1] = '\0';
-    if ((argument + 1))
+    if (1) // was ((argument + 1))
       strcpy(buf2, (argument + 1));
     else
       buf2[0] = '\0';
@@ -374,7 +374,7 @@ char *one_argument(char *argument, char *first_arg) {
 
   do {
     /* Find first non blank */
-    for (; isspace(*(argument + begin)); begin++);
+    for (; isspace((int)(*(argument + begin))); begin++);
 
     /* Find length of first word */
     for (look_at = 0; *(argument + begin + look_at) > ' '; look_at++)
@@ -394,7 +394,7 @@ char *one_argument(char *argument, char *first_arg) {
 
 
 void only_argument(char *argument, char *dest) {
-  while (*argument && isspace(*argument))
+  while (*argument && isspace((int)(*argument)))
     argument++;
   strcpy(dest, argument);
 }
@@ -427,13 +427,13 @@ int is_abbrev(char *arg1, char *arg2) {
 
 /* return first 'word' plus trailing substring of input string */
 void half_chop(char *string, char *arg1, char *arg2) {
-  for (; isspace(*string); string++);
+  for (; isspace((int)(*string)); string++);
 
-  for (; !isspace(*arg1 = *string) && *string; string++, arg1++);
+  for (; !isspace((int)(*arg1 = *string)) && *string; string++, arg1++);
 
   *arg1 = '\0';
 
-  for (; isspace(*string); string++);
+  for (; isspace((int)(*string)); string++);
 
   for (; (*arg2 = *string) != '\0'; string++, arg2++);
 }
@@ -842,10 +842,10 @@ int _parse_name(char *arg, char *name) {
   int i;
 
   /* skip whitespaces */
-  for (; isspace(*arg); arg++);
+  for (; isspace((int)(*arg)); arg++);
 
   for (i = 0; (*name = *arg) != '\0'; arg++, i++, name++)
-    if ((*arg < 0) || !isalpha(*arg) || i > 15)
+    if ((*arg < 0) || !isalpha((int)(*arg)) || i > 15)
       return (1);
 
   if (!i)
@@ -882,7 +882,7 @@ void nanny(struct descriptor_data *d, char *arg) {
 
   case CON_ALIGN:
 
-    for (; isspace(*arg); arg++);
+    for (; isspace((int)(*arg)); arg++);
 
     if (!arg) {
       if (!(GET_ALIGNMENT(d->character)))
@@ -976,7 +976,7 @@ void nanny(struct descriptor_data *d, char *arg) {
     break;
   case CON_QRACE:
 
-    for (; isspace(*arg); arg++);
+    for (; isspace((int)(*arg)); arg++);
     if (!*arg) {
       SEND_TO_Q(VT_HOMECLR, d);
       SEND_TO_Q("Choose A Race:\n\r\n\r", d);
@@ -990,7 +990,7 @@ void nanny(struct descriptor_data *d, char *arg) {
       else if (*arg == '?') {
         /*         SEND_TO_Q(RACEHELP, d); */
         arg++;                  /* increment past the ? */
-        for (; isspace(*arg); arg++);   /* eat more spaces if any */
+        for (; isspace((int)(*arg)); arg++);   /* eat more spaces if any */
         if (is_number(arg)) {
           choice = atoi(arg);
           for (i = 1; RaceList[i].what[0] != '\n'; i++);
@@ -1137,7 +1137,7 @@ void nanny(struct descriptor_data *d, char *arg) {
       d->character->desc = d;
     }
 
-    for (; isspace(*arg); arg++);
+    for (; isspace((int)(*arg)); arg++);
     if (!*arg)
       close_socket(d);
     else {
@@ -1241,7 +1241,7 @@ void nanny(struct descriptor_data *d, char *arg) {
 
   case CON_NMECNF:             /* wait for conf. of new name   */
     /* skip whitespaces */
-    for (; isspace(*arg); arg++);
+    for (; isspace((int)(*arg)); arg++);
 
     if (*arg == 'y' || *arg == 'Y') {
       SEND_TO_Q("New character.\n\r", d);
@@ -1266,7 +1266,7 @@ void nanny(struct descriptor_data *d, char *arg) {
 
   case CON_PWDNRM:             /* get pwd for known player     */
     /* skip whitespaces */
-    for (; isspace(*arg); arg++);
+    for (; isspace((int)(*arg)); arg++);
     if (!*arg)
       close_socket(d);
     else {
@@ -1335,7 +1335,7 @@ void nanny(struct descriptor_data *d, char *arg) {
 
   case CON_PWDGET:             /* get pwd for new player       */
     /* skip whitespaces */
-    for (; isspace(*arg); arg++);
+    for (; isspace((int)(*arg)); arg++);
 
     if (!*arg || strlen(arg) > 10) {
 
@@ -1357,7 +1357,7 @@ void nanny(struct descriptor_data *d, char *arg) {
 
   case CON_PWDCNF:             /* get confirmation of new pwd  */
     /* skip whitespaces */
-    for (; isspace(*arg); arg++);
+    for (; isspace((int)(*arg)); arg++);
 
     if (strncmp(crypt(arg, d->character->player.name), d->pwd, 10)) {
       write(d->descriptor, echo_on, 6);
@@ -1379,7 +1379,7 @@ void nanny(struct descriptor_data *d, char *arg) {
 
   case CON_QSEX:               /* query sex of new user        */
 
-    for (; isspace(*arg); arg++);
+    for (; isspace((int)(*arg)); arg++);
     switch (*arg) {
     case 'm':
     case 'M':
@@ -1412,7 +1412,7 @@ void nanny(struct descriptor_data *d, char *arg) {
       junk[i] = 0;
 
     while (*arg && index < MAX_STAT) {
-      for (; isspace(*arg); arg++);
+      for (; isspace((int)(*arg)); arg++);
       if (*arg == 'S' || *arg == 's') {
         if (!junk[0])
           d->stat[index++] = 's';
@@ -1502,7 +1502,7 @@ void nanny(struct descriptor_data *d, char *arg) {
 
   case CON_QCLASS:{
       /* skip whitespaces */
-      for (; isspace(*arg); arg++);
+      for (; isspace((int)(*arg)); arg++);
       d->character->player.class = 0;
       count = 0;
       oops = FALSE;
@@ -1785,7 +1785,7 @@ void nanny(struct descriptor_data *d, char *arg) {
 
   case CON_CITY_CHOICE:
     /* skip whitespaces */
-    for (; isspace(*arg); arg++);
+    for (; isspace((int)(*arg)); arg++);
     if (d->character->in_room != NOWHERE) {
       SEND_TO_Q("This choice is only valid when you have been auto-saved\n\r",
                 d);
@@ -1953,7 +1953,7 @@ void nanny(struct descriptor_data *d, char *arg) {
 
   case CON_SLCT:               /* get selection from main menu */
     /* skip whitespaces */
-    for (; isspace(*arg); arg++);
+    for (; isspace((int)(*arg)); arg++);
     switch (*arg) {
     case '0':
       close_socket(d);
@@ -2111,7 +2111,7 @@ void nanny(struct descriptor_data *d, char *arg) {
 
   case CON_PWDNEW:
     /* skip whitespaces */
-    for (; isspace(*arg); arg++);
+    for (; isspace((int)(*arg)); arg++);
 
     if (!*arg || strlen(arg) > 10) {
       write(d->descriptor, echo_on, 6);
@@ -2138,7 +2138,7 @@ void nanny(struct descriptor_data *d, char *arg) {
     break;
   case CON_PWDNCNF:
     /* skip whitespaces */
-    for (; isspace(*arg); arg++);
+    for (; isspace((int)(*arg)); arg++);
 
     if (strncmp(crypt(arg, d->character->player.name), d->pwd, 10)) {
       write(d->descriptor, echo_on, 6);
