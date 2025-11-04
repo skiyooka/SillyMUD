@@ -88,7 +88,7 @@ int get_int(int min, int max, int zero_ok) {
   return i;
 }
 
-get_string(char *s) {
+void get_string(char *s) {
   do {
     printf(">");
     gets(s);
@@ -99,11 +99,11 @@ get_string(char *s) {
   } while (*s == '\0' || *s == ' ');
 }
 
-main(int argc, char *argv[]) {
+int main(int argc, char *argv[]) {
   char tempbuf[255];
   time_t CURRENT_TIME;
   int fucked, ones, nulls, ok;
-  register i, j;
+  int i, j;
   int number_level[9];
   FILE *f, *f2;
 
@@ -159,14 +159,14 @@ main(int argc, char *argv[]) {
         fucked++;
         ok = FALSE;
       }
-    log_msgf("[%-4d] %s\n", i, pt2.name);
+    printf("[%-4d] %s\n", i, pt2.name);
     if (!feof(f) && ok) {
       fwrite(&pt1, sizeof(struct char_file_u2), 1, f2);
       fwrite(&insert, sizeof(struct bart), 1, f2);
       fwrite(&pt2, sizeof(struct char_file_u3), 1, f2);
     }
     if (!(i % 100))
-      log_msgf(".");
+      printf(".");
   }
 
   fclose(f);
@@ -179,8 +179,9 @@ main(int argc, char *argv[]) {
 
 char *time_print(long et) {
   char *buff;
+  time_t et2 = et;
 
-  buff = (char *)asctime(localtime(&et));
+  buff = (char *)asctime(localtime(&et2));
   *(buff + strlen(buff) - 1) = '\0';
   return (buff);
 }

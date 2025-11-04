@@ -30,7 +30,9 @@ void vlog_lev_msgf(int level, const char *fmt, va_list args) {
   va_copy(nargs, args);
   vsnprintf(buf, sizeof(buf)-1, fmt, nargs);
   if (daemon_mode) {
+#ifndef ESP_PLATFORM
     vsyslog(level, fmt, args);
+#endif
   } else {
     printf("%s\n", buf);
   }
@@ -378,7 +380,7 @@ void log_wiz(char *str, int sev) {
 }
 
 void slog(char *str) {
-  long ct;
+  time_t ct;
   char *tmstr;
 
   ct = time(0);
@@ -1984,7 +1986,7 @@ void teleport_pulse_stuff(int pulse) {
 
   register struct char_data *ch;
   struct char_data *next, *tmp, *bk, *n2;
-  int tick, tm;
+  int tick = 0, tm;
   struct room_data *rp, *dest;
   struct obj_data *obj_object, *temp_obj;
 
@@ -3035,7 +3037,7 @@ int is_dark_outside(struct room_data *rp) {
 /* will look at char's classes and chose the "best" stat to increment. */
 /* Man, there are more bugs at campsites than anywhere else. */
 
-void improve_prefered_stat(struct char_data *ch, int num, bool onelifer) {
+void improve_prefered_stat(struct char_data *ch, int num, byte onelifer) {
   if (has_class(ch, CLASS_WARRIOR)) {
     if (GET_RSTR(ch) < 18) {
       GET_RSTR(ch) += 1;

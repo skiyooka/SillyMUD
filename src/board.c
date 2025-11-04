@@ -143,7 +143,7 @@ void board_write_msg(struct char_data *ch, char *arg, int bnum) {
 
   int highmessage;
   char buf[MAX_STRING_LENGTH];
-  long ct;                      /* clock time */
+  time_t ct;                      /* clock time */
   char *tmstr;
 
   if (bnum == -1) {

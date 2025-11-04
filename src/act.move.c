@@ -645,7 +645,7 @@ void display_move(struct char_data *ch, int dir, int was_in, int total) {
 }
 
 
-int add_to_char_heap(struct char_data *heap[50], int *top, int total[50],
+int add_to_char_heap(struct char_data **heap, int *top, int *total,
                      struct char_data *k) {
   int found, i;
 

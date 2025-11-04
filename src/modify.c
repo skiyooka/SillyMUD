@@ -957,7 +957,7 @@ void show_string(struct descriptor_data *d, char *input) {
 
 
 void night_watchman() {
-  long tc;
+  time_t tc;
   struct tm *t_info;
 
   extern int mudshutdown;
@@ -982,7 +982,7 @@ void night_watchman() {
 
 
 void check_reboot() {
-  long tc;
+  time_t tc;
   struct tm *t_info;
   char dummy;
   FILE *boot;

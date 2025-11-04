@@ -1383,8 +1383,12 @@ void cast_resist_blunt(byte level, struct char_data *ch, char *arg, int type,
 /* From utility.c */
 int char_array_size(char *thingie[]);
 int ego_blade_save(struct char_data *ch);
+#ifndef MIN
 int MIN(int a, int b);
+#endif
+#ifndef MAX
 int MAX(int a, int b);
+#endif
 int get_item_class_restrictions(struct obj_data *obj);
 int CAN_SEE(struct char_data *s, struct char_data *o);
 int CAN_SEE_OBJ(struct char_data *ch, struct obj_data *obj);

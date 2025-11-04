@@ -3852,7 +3852,7 @@ int dwarven_miners(struct char_data *ch, const char * UNUSED(cmd), char *UNUSED(
       ch->player.long_descr = (char *)realloc(ch->player.long_descr,
                                               sizeof(char) * 50);
       strcpy(ch->player.long_descr,
-             "A dwarven mine-worker is here, working the mines.\n\r");
+             "A dwarven worker is here, working the mines.\n\r");
       if (gevent != 0)
         gevent = 0;
       shop_multiplier = 0;
