@@ -249,7 +249,7 @@ void show_obj_to_char(struct obj_data *object, struct char_data *ch, int mode) {
 void show_mult_obj_to_char(struct obj_data *object, struct char_data *ch,
                            int mode, int num) {
   char buffer[MAX_STRING_LENGTH];
-  char tmp[10];
+  char tmp[24];
 
   buffer[0] = 0;
   tmp[0] = 0;
@@ -716,7 +716,7 @@ void show_char_to_char(struct char_data *i, struct char_data *ch, int mode) {
 void show_mult_char_to_char(struct char_data *i, struct char_data *ch,
                             int mode, int num) {
   char buffer[MAX_STRING_LENGTH];
-  char tmp[10];
+  char tmp[24];
   int j, found, percent;
   struct obj_data *tmp_obj;
 
@@ -2829,7 +2829,7 @@ void do_spells(struct char_data *ch, char *argument,
 }
 void do_world(struct char_data *ch, char *UNUSED(argument),
               const char * UNUSED(cmd)) {
-  long ct, ot;
+  time_t ct, ot;
   char *tmstr, *otmstr;
   extern long Uptime;
   extern long room_count;
