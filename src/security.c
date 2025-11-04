@@ -51,7 +51,7 @@ int wiz_security_check(int sock, char *name) {
     }
 
     /* next try it as a hostname */
-    if ((he = gethostbyname2(buf, ((struct sockaddr *)&sa)->sa_family))) {
+    if ((he = gethostbyname(buf))) {
       if (matches_hostname((struct sockaddr *)&sa, he)) {
         fclose(f);
         return(1);
