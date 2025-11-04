@@ -1,7 +1,6 @@
 #ifndef _UTILITY_H
 #define _UTILITY_H
-
-#include <syslog.h>
+#include "syslog.h"
 
 void log_lev_msgf(int level, const char *fmt, ...);
 void log_msgf(const char *fmt, ...);

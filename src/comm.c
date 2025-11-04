@@ -24,7 +24,7 @@
 #include <sys/resource.h>
 #include <unistd.h>
 #include <stdarg.h>
-#include <syslog.h>
+#include "syslog.h"
 #include "structs.h"
 #include "protos.h"
 #include "act.other.h"

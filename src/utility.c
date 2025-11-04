@@ -11,7 +11,7 @@
 #include <string.h>
 #include <ctype.h>
 #include <time.h>
-#include <syslog.h>
+#include "syslog.h"
 
 #include "protos.h"
 #include "options.h"
