@@ -293,7 +293,7 @@ typedef struct {
 #define WAIT_ROUND     4
 
 /* We were getting purify hits on MAX_STRING_LENGTH */
-#define MAX_STRING_LENGTH   20480
+#define MAX_STRING_LENGTH   4096
 #define MAX_INPUT_LENGTH     160
 #define MAX_MESSAGES          60
 #define MAX_ITEMS            153
