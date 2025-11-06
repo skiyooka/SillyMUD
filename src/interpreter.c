@@ -70,6 +70,12 @@ void do_auth(struct char_data *ch, char *arg, int cmd); /* jdb 3-1 */
 #endif
 
 
+#ifdef ESP_PLATFORM
+// crypt is not available on ESP32
+char * crypt (const char *__key, const char *__salt) {
+  return __key;  // no encryption!
+}
+#endif
 
 
 char *fill[] = { "in",
