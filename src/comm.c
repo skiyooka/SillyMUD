@@ -218,6 +218,7 @@ int real_main(int argc, char **argv) {
 }
 
 void run_as_daemon() {
+#ifndef ESP_PLATFORM
   pid_t pid, sid;
   
   if ((pid = fork()) < 0) {
@@ -237,6 +238,7 @@ void run_as_daemon() {
   close(STDIN_FILENO);
   close(STDOUT_FILENO);
   close(STDERR_FILENO);
+#endif
 }
 
 
@@ -295,10 +297,12 @@ void game_loop(int s) {
   char comm[MAX_INPUT_LENGTH];
   char promptbuf[80];
   struct descriptor_data *point, *next_point;
+#ifndef ESP_PLATFORM
 #ifdef HAVE_SIGPROCMASK
   sigset_t sigmask;
 #else
   int mask;
+#endif
 #endif
   struct room_data *rm;
 
@@ -315,8 +319,11 @@ void game_loop(int s) {
 
   maxdesc = s;
   /* !! Change if more needed !! */
+#ifndef ESP_PLATFORM
   avail_descs = getdtablesize() - 2;
+#endif
 
+#ifndef ESP_PLATFORM
 #ifdef HAVE_SIGPROCMASK
   sigemptyset(&sigmask);
   sigaddset(&sigmask, SIGUSR1);
@@ -332,6 +339,7 @@ void game_loop(int s) {
   mask = sigmask(SIGUSR1) | sigmask(SIGUSR2) | sigmask(SIGINT) |
     sigmask(SIGPIPE) | sigmask(SIGALRM) | sigmask(SIGTERM) |
     sigmask(SIGURG) | sigmask(SIGXCPU) | sigmask(SIGHUP);
+#endif
 #endif
 
   /* Main loop */
@@ -387,10 +395,12 @@ void game_loop(int s) {
       last_time.tv_sec++;
     }
 
+#ifndef ESP_PLATFORM
 #ifdef HAVE_SIGPROCMASK
     sigprocmask(SIG_SETMASK, &sigmask, NULL);
 #else
     sigsetmask(mask);
+#endif
 #endif
 
     if (select(maxdesc + 1, &input_set, &output_set, &exc_set, &null_time)
@@ -408,11 +418,13 @@ void game_loop(int s) {
       /*assert(0); */
     }
 
+#ifndef ESP_PLATFORM
 #ifdef HAVE_SIGPROCMASK
     sigemptyset(&sigmask);
     sigprocmask(SIG_SETMASK, &sigmask, NULL);
 #else
     sigsetmask(0);
+#endif
 #endif
 
     /* Respond to whatever might be happening */
@@ -1198,12 +1210,15 @@ void coma(int s) {
   };
   int conn;
 
+#ifndef ESP_PLATFORM
 #ifdef HAVE_SIGPROCMASK
   sigset_t sigmask;
+#endif
 #endif
 
   log_msg("Entering comatose state.");
 
+#ifndef ESP_PLATFORM
 #ifdef HAVE_SIGPROCMASK
   sigemptyset(&sigmask);
   sigaddset(&sigmask, SIGUSR1);
@@ -1221,6 +1236,7 @@ void coma(int s) {
              sigmask(SIGPIPE) | sigmask(SIGALRM) | sigmask(SIGTERM) |
              sigmask(SIGURG) | sigmask(SIGXCPU) | sigmask(SIGHUP));
 #endif
+#endif
 
   while (descriptor_list)
     close_socket(descriptor_list);
@@ -1235,11 +1251,13 @@ void coma(int s) {
     if (FD_ISSET(s, &input_set)) {
       if (load() < 6) {
         log_msg("Leaving coma with visitor.");
+#ifndef ESP_PLATFORM
 #ifdef HAVE_SIGPROCMASK
         sigemptyset(&sigmask);
         sigprocmask(SIG_SETMASK, &sigmask, NULL);
 #else
         sigsetmask(0);
+#endif
 #endif
         return;
       }
@@ -1259,11 +1277,13 @@ void coma(int s) {
   while (load() >= 6);
 
   log_msg("Leaving coma.");
+#ifndef ESP_PLATFORM
 #ifdef HAVE_SIGPROCMASK
   sigemptyset(&sigmask);
   sigprocmask(SIG_SETMASK, &sigmask, NULL);
 #else
   sigsetmask(0);
+#endif
 #endif
 }
 

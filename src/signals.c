@@ -21,6 +21,7 @@ void hupsig(int);
 void raw_force_all(char *to_force);
 
 void signal_setup() {
+#ifndef ESP_PLATFORM
   struct itimerval itime;
   struct timeval interval;
 
@@ -42,6 +43,7 @@ void signal_setup() {
   itime.it_value = interval;
   setitimer(ITIMER_VIRTUAL, &itime, 0);
   signal(SIGVTALRM, checkpointing);
+#endif
 }
 
 void checkpointing(int UNUSED(sig)) {
