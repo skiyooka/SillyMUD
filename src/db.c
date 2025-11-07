@@ -79,7 +79,7 @@ int top_of_helpt;               /* top of help index table         */
 struct time_info_data time_info;        /* the infomation about the time   */
 struct weather_data weather_info;       /* the infomation about the weather */
 
-int saved_rooms[29000];
+int saved_rooms[WORLD_SIZE];
 int number_of_saved_rooms = 0;
 extern struct descriptor_data *descriptor_list;
 

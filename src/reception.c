@@ -448,7 +448,7 @@ void obj_to_store(struct obj_data *obj, struct obj_file_u *st,
 
 /* write the vital data of a player to the player file */
 void save_obj(struct char_data *ch, struct obj_cost *cost, int delete) {
-  static struct obj_file_u st;
+  struct obj_file_u st;
   int i;
   char buf[128];
 

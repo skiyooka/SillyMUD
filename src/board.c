@@ -16,8 +16,8 @@
 #include "utility.h"
 
 
-#define MAX_MSGS 99             /* Max number of messages.          */
-#define MAX_MESSAGE_LENGTH 2048 /* that should be enough            */
+#define MAX_MSGS 3             /* Max number of messages.          */
+#define MAX_MESSAGE_LENGTH 256 /* that should be enough            */
 #define MAX_META_LENGTH 128
 #define NUM_BOARDS 3
 
