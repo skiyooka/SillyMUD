@@ -189,10 +189,12 @@ int real_main(int argc, char **argv) {
     close(STDIN_FILENO);
   }
 
+#ifndef ESP_PLATFORM
   if (chdir(dir) < 0) {
     perror("chdir");
     assert(0);
   }
+#endif
 
   srandom(time(0));
   WizLock = FALSE;
