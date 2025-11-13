@@ -783,12 +783,15 @@ int init_socket(int port) {
     exit(1);
   }
 
+#ifndef ESP_PLATFORM
+// SO_LINGER doesn't seem to be supported on ESP32
   ld.l_onoff = 1;
   ld.l_linger = 100;
   if (setsockopt(s, SOL_SOCKET, SO_LINGER, &ld, sizeof(ld)) < 0) {
     perror("setsockopt LINGER");
     assert(0);
   }
+#endif
 
   if (bind(s, (struct sockaddr *)&sa, sizeof(sa)) < 0) {
     perror("bind");
