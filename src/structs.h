@@ -295,7 +295,11 @@ typedef struct {
 /* We were getting purify hits on MAX_STRING_LENGTH */
 #define MAX_STRING_LENGTH   4096
 #define MAX_INPUT_LENGTH     160
+#ifndef ESP_LOW_RAM
 #define MAX_MESSAGES          60
+#else
+#define MAX_MESSAGES          5
+#endif
 #define MAX_ITEMS            153
 
 #define MESS_ATTACKER 1
@@ -1154,7 +1158,12 @@ struct obj_cost {               /* used in act.other.c:do_save as
   bool ok;
 };
 
+#ifndef ESP_LOW_RAM
 #define MAX_OBJ_SAVE 200        /* Used in OBJ_FILE_U *DO*NOT*CHANGE* */
+#else
+// large values consume a lot of the stack
+#define MAX_OBJ_SAVE 10
+#endif
 
 struct equip_fill {
   sh_int finger[3];

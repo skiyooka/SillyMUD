@@ -1022,8 +1022,12 @@ void assign_mobiles() {
     }
   }
 
+#ifndef ESP_LOW_RAM
   boot_the_shops();
   assign_the_shopkeepers();
+#else
+  log_msgf("ESP_LOW_RAM defined: skipping shopkeeper assignments.");
+#endif
 }
 
 typedef int (*oproc) (struct char_data *, const char *, char *,

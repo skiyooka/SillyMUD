@@ -140,10 +140,14 @@ void boot_db() {
     perror("boot");
     assert(0);
   }
+#ifndef ESP_LOW_RAM
   if (!(help_fl = fopen(HELP_KWRD_FILE, "r")))
     log_msg("   Could not open help file.");
   else
     help_index = build_help_index(help_fl, &top_of_helpt);
+#else
+  log_msg("ESP_LOW_RAM skip: building help index.");
+#endif
 
   log_msg("Booting Figurine Table.");
   boot_figurines();
@@ -166,14 +170,26 @@ void boot_db() {
   log_msg("Generating player index.");
   build_player_index();
 
+#ifndef ESP_LOW_RAM
   log_msg("Loading fight messages.");
   load_messages();
+#else
+  log_msg("ESP_LOW_RAM skip: Loading fight messages.");
+#endif
 
+#ifndef ESP_LOW_RAM
   log_msg("Loading social messages.");
   boot_social_messages();
+#else
+  log_msg("ESP_LOW_RAM skip: Loading social messages.");
+#endif
 
+#ifndef ESP_LOW_RAM
   log_msg("Loading pose messages.");
   boot_pose_messages();
+#else
+  log_msg("ESP_LOW_RAM skip: Loading pose messages.");
+#endif
 
   log_msg("Assigning function pointers:");
   if (!no_specials) {
@@ -185,15 +201,35 @@ void boot_db() {
     assign_rooms();
   }
 
+#ifndef ESP_LOW_RAM
   log_msg("   Commands.");
   assign_command_pointers();
+#else
+  log_msg("ESP_LOW_RAM using minimal: Commands.");
+  assign_command_pointers_minimal();
+#endif
+
+#ifndef ESP_LOW_RAM
   log_msg("   Spells.");
   assign_spell_pointers();
+#else
+  log_msg("ESP_LOW_RAM skip: Spells.");
+#endif
+
+#ifndef ESP_LOW_RAM
   log_msg("   Skills.");
   assign_skills();
+#else
+  log_msg("ESP_LOW_RAM skip: Skills.");
+#endif
 
+#ifndef ESP_LOW_RAM
   log_msg("Updating characters with saved items:");
   update_obj_file();
+#else
+  log_msg("ESP_LOW_RAM skip: Updating characters with saved items:");
+#endif
+
   log_msg("Loading saved rooms.");
   reload_rooms();
 
@@ -687,7 +723,11 @@ struct obj_index_data *make_obj_indices(struct _index_data *base_idx,
 /* generate index table for object or monster file */
 struct _index_data *generate_indices(FILE * fl, int *top) {
   int i = 0;
+#ifndef ESP_LOW_RAM
   long bc = 1500;
+#else
+  long bc = 100;
+#endif
   struct _index_data *index = NULL;
   char buf[82];
 
@@ -1086,7 +1126,11 @@ void renum_zone_table() {
 void boot_zones() {
 
   FILE *fl;
+#ifndef ESP_LOW_RAM
   int zon = 0, cmd_no = 0, expand, tmp, bc = 100, cc = 22;
+#else
+  int zon = 0, cmd_no = 0, expand, tmp, bc = 10, cc = 22;
+#endif
   char *check, buf[81];
 
   if (!(fl = fopen(ZONE_FILE, "r"))) {

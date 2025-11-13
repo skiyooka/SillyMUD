@@ -496,6 +496,37 @@ int special(struct char_data *ch, const char *cmd, char *arg) {
   return (0);
 }
 
+void assign_command_pointers_minimal() {
+  init_radix();
+  add_command("north", do_move, POSITION_STANDING, 0);
+  add_command("east", do_move, POSITION_STANDING, 0);
+  add_command("south", do_move, POSITION_STANDING, 0);
+  add_command("west", do_move, POSITION_STANDING, 0);
+  add_command("up", do_move, POSITION_STANDING, 0);
+  add_command("down", do_move, POSITION_STANDING, 0);
+  add_command("enter", do_enter, POSITION_STANDING, 0);
+  add_command("exits", do_exits, POSITION_RESTING, 0);
+  add_command("get", do_get, POSITION_RESTING, 1);
+  add_command("wear", do_wear, POSITION_RESTING, 0);
+  add_command("wield", do_wield, POSITION_RESTING, 1);
+  add_command("look", do_look, POSITION_RESTING, 0);
+  add_command("score", do_score, POSITION_DEAD, 0);
+  add_command("say", do_say, POSITION_RESTING, 0);
+  add_command("shout", do_shout, POSITION_RESTING, 2);
+  add_command("tell", do_tell, POSITION_RESTING, 0);
+  add_command("inventory", do_inventory, POSITION_DEAD, 0);
+  add_command("who", do_who, POSITION_DEAD, 0);
+  add_command("equipment", do_equipment, POSITION_SLEEPING, 0);
+  add_command("drop", do_drop, POSITION_RESTING, 1);
+  add_command("goto", do_goto, POSITION_SLEEPING, 0);
+  add_command("remove", do_remove, POSITION_RESTING, 0);
+  add_command("shutdow", do_shutdow, POSITION_DEAD, SILLYLORD);
+  add_command("save", do_save, POSITION_SLEEPING, 0);
+  add_command("hit", do_hit, POSITION_FIGHTING, 1);
+  add_command("give", do_give, POSITION_RESTING, 1);
+  add_command("quit", do_quit, POSITION_DEAD, 0);
+}
+
 void assign_command_pointers() {
   init_radix();
   add_command("north", do_move, POSITION_STANDING, 0);

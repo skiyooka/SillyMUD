@@ -439,6 +439,7 @@ void only_argument(char *argument, char *dest);
 int fill_word(char *argument);
 int is_abbrev(char *arg1, char *arg2);
 void half_chop(char *string, char *arg1, char *arg2);
+void assign_command_pointers_minimal();
 void assign_command_pointers();
 int find_name(char *name);
 int _parse_name(char *arg, char *name);

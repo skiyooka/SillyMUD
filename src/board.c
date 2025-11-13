@@ -16,7 +16,12 @@
 #include "utility.h"
 
 
+#ifndef ESP_LOW_RAM
+#define MAX_MSGS 99             /* Max number of messages.          */
+#else
+// large values consume a lot of the data segment
 #define MAX_MSGS 3             /* Max number of messages.          */
+#endif
 #define MAX_MESSAGE_LENGTH 256 /* that should be enough            */
 #define MAX_META_LENGTH 128
 #define NUM_BOARDS 3

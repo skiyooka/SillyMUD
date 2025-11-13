@@ -162,7 +162,11 @@ void load_messages() {
 
     if (i >= MAX_MESSAGES) {
       log_msg("Too many combat messages.");
+#ifndef ESP_LOW_RAM
       exit(0);
+#else
+      break;
+#endif
     }
 
     CREATE(messages, struct message_type, 1);

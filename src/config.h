@@ -1,6 +1,9 @@
 /* config.h.  Generated from config.h.in by configure.  */
 /* config.h.in.  Generated from configure.ac by autoheader.  */
 
+/* Define if 512 KB RAM or less is available to get everything to fit */
+#define ESP_LOW_RAM 1
+
 /* Default location to look for game data files */
 #define DEFAULT_LIBDIR "/"
 
