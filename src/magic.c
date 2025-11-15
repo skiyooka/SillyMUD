@@ -1697,7 +1697,11 @@ void spell_word_of_recall(byte UNUSED(level), struct char_data *UNUSED(ch),
     location = victim->player.hometown;
   }
   else {
+#ifndef ESP_TINY_WORLD
     location = 3001;
+#else
+    location = 301;
+#endif
   }
 
   if (!real_roomp(location)) {

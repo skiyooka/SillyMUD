@@ -97,6 +97,7 @@ void assign_mobiles() {
     {250, snake},               /* snake       */
     {257, magic_user},          /* magic_user  */
 
+#ifndef ESP_TINY_WORLD
     {600, druid_challenger},
     {601, druid_challenger},
     {602, druid_challenger},
@@ -1005,6 +1006,7 @@ void assign_mobiles() {
     {7527, fighter},
     {7528, fighter},
     {7530, fighter},
+#endif
 
     {-1, NULL},
   };

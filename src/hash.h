@@ -27,7 +27,7 @@ struct hash_header {
 #ifndef ESP_LOW_RAM
 #define WORLD_SIZE 30000
 #else
-#define WORLD_SIZE 300
+#define WORLD_SIZE 400
 #endif
 
 #endif

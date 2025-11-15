@@ -453,7 +453,11 @@ int special(struct char_data *ch, const char *cmd, char *arg) {
 
 
   if (ch->in_room == NOWHERE) {
+#ifndef ESP_TINY_WORLD
     char_to_room(ch, 3001);
+#else
+    char_to_room(ch, 301);
+#endif
     return (0);
   }
 
@@ -1840,9 +1844,13 @@ void nanny(struct descriptor_data *d, char *arg) {
         d->character->next = character_list;
         character_list = d->character;
 
+#ifndef ESP_TINY_WORLD
         char_to_room(d->character, 3001);
         d->character->player.hometown = 3001;
-
+#else
+        char_to_room(d->character, 301);
+        d->character->player.hometown = 301;
+#endif
 
         d->character->specials.tick = plr_tick_count++;
         if (plr_tick_count == PLR_TICK_WRAP)
@@ -2014,8 +2022,13 @@ void nanny(struct descriptor_data *d, char *arg) {
               d->character->player.hometown = 1103;
             }
             else {
+#ifndef ESP_TINY_WORLD
               char_to_room(d->character, 3001);
               d->character->player.hometown = 3001;
+#else
+              char_to_room(d->character, 301);
+              d->character->player.hometown = 301;
+#endif
             }
           }
           else {
@@ -2047,8 +2060,13 @@ void nanny(struct descriptor_data *d, char *arg) {
           d->character->player.hometown = d->character->in_room;
         }
         else {
+#ifndef ESP_TINY_WORLD
           char_to_room(d->character, 3001);
           d->character->player.hometown = 3001;
+#else
+          char_to_room(d->character, 301);
+          d->character->player.hometown = 301;
+#endif
         }
       }
 

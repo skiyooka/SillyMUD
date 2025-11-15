@@ -1,6 +1,9 @@
 /* config.h.  Generated from config.h.in by configure.  */
 /* config.h.in.  Generated from configure.ac by autoheader.  */
 
+/* Define if using minimal world */
+#define ESP_TINY_WORLD 1
+
 /* Define if 512 KB RAM or less is available to get everything to fit */
 #define ESP_LOW_RAM 1
 
