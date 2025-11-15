@@ -1,0 +1,23 @@
+# Enable the ESP-IDF coredump component and save to Flash
+CONFIG_ESP_COREDUMP_ENABLE_TO_FLASH=y
+
+CONFIG_ESPTOOLPY_FLASHSIZE_8MB=y
+
+CONFIG_PARTITION_TABLE_CUSTOM=y
+CONFIG_PARTITION_TABLE_CUSTOM_FILENAME="partitions.csv"
+CONFIG_PARTITION_TABLE_FILENAME="partitions.csv"
+CONFIG_PARTITION_TABLE_OFFSET=0x8000
+CONFIG_PARTITION_TABLE_MD5=y
+
+# All FATFS long file names
+CONFIG_FATFS_LFN_HEAP=y
+
+# Large stack as some variables are of significant size
+CONFIG_ESP_MAIN_TASK_STACK_SIZE=32768
+
+
+# Memfault - set the project key
+CONFIG_MEMFAULT_PROJECT_KEY="<TODO:ProjectKey>"
+
+# Memfault - enable automatic periodic posting of heartbeats
+CONFIG_MEMFAULT_HTTP_PERIODIC_UPLOAD=y
