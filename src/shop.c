@@ -20,7 +20,12 @@
 #include "shop.h"
 #include "spec_procs.h"
 
+#ifndef ESP_TINY_WORLD
+#define SHOP_FILE "world.shp"
+#else
 #define SHOP_FILE "tinyworld.shp"
+#endif
+
 #define MAX_TRADE 5
 #define MAX_PROD 5
 

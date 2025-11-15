@@ -6,10 +6,18 @@
 
 /* data files used by the game system */
 
+#ifndef ESP_TINY_WORLD
+#define WORLD_FILE        "world.wld"       /* room definitions           */
+#define MOB_FILE          "world.mob"       /* monster prototypes         */
+#define OBJ_FILE          "world.obj"       /* object prototypes          */
+#define ZONE_FILE         "world.zon"       /* zone defs & command tables */
+#else
 #define WORLD_FILE        "tinyworld.wld"       /* room definitions           */
 #define MOB_FILE          "tinyworld.mob"       /* monster prototypes         */
 #define OBJ_FILE          "tinyworld.obj"       /* object prototypes          */
 #define ZONE_FILE         "tinyworld.zon"       /* zone defs & command tables */
+#endif
+
 #define CREDITS_FILE      "credits"     /* for the 'credits' command  */
 #define NEWS_FILE         "news"        /* for the 'news' command     */
 #define MOTD_FILE         "motd"        /* messages of today          */
