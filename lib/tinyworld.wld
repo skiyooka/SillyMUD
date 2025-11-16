@@ -60,7 +60,7 @@ the mortals out.
 ~
 1 579 1
 S
-#301
+#101
 The Temple Of Midgaard~
    You are in the southern end of the temple hall in the Temple of Midgaard.
 The temple has been constructed from giant marble blocks, eternal in
@@ -74,7 +74,7 @@ D0
 At the northern end of the temple hall is a statue and a huge altar.
 ~
 ~
-0 -1 354
+0 -1 154
 D1
 ~
 ~
@@ -83,7 +83,7 @@ D2
 You look down the huge stone steps at the temple square below.
 ~
 ~
-0 -1 305
+0 -1 105
 D3
 You can see a small wooden door.
 ~
@@ -93,9 +93,9 @@ D5
 You see the temple square.
 ~
 ~
-0 -1 305
+0 -1 105
 S
-#302
+#102
 Cleric's Inner Sanctum~
    This is the inner sanctum.  A picture of the mighty Thor, is hanging on
 the wall, just above the altar which is set against the western wall.  A well
@@ -107,7 +107,7 @@ D1
 You see your favorite place, the bar of divination.
 ~
 ~
-0 -1 303
+0 -1 103
 D5
 You can't see what is down there, it is too dark.  Looks like it would be
 impossible to climb back up.
@@ -115,7 +115,7 @@ impossible to climb back up.
 ~
 0 -1 7026
 S
-#303
+#103
 Cleric's Bar~
    The bar is one of the finest in the land, lucky it is members only.  Fine
 furniture is set all around the room.  A small sign is hanging on the wall.
@@ -125,12 +125,12 @@ D2
 You see the entrance.
 ~
 ~
-0 -1 304
+0 -1 104
 D3
 You see the inner sanctum.
 ~
 ~
-0 -1 302
+0 -1 102
 E
 sign~
 The sign reads:
@@ -141,7 +141,7 @@ Free instructions provided by the waiter:
           specialties, and tell the price of each.
 ~
 S
-#304
+#104
 Entrance to Cleric's Guild~
    The entrance hall is a small modest room, reflecting the true nature of
 the Clerics.  The exit leads east to the temple square.  A small entrance to
@@ -152,14 +152,14 @@ D0
 You see the bar, richly decorated with really stylish furniture.
 ~
 ~
-0 -1 303
+0 -1 103
 D1
 You see the Temple Square.
 ~
 ~
-0 -1 305
+0 -1 105
 S
-#305
+#105
 The Temple Square~
    You are standing on the temple square.  Huge marble steps lead up to the
 temple gate.  The entrance to the Clerics Guild is to the west, and the old
@@ -176,19 +176,19 @@ D1
 You see the good old Grunting Boar Inn.
 ~
 ~
-0 -1 306
+0 -1 106
 D2
 You see the Market Square.
 ~
 ~
-0 -1 314
+0 -1 114
 D3
 You see the entrance to the Clerics Guild.
 ~
 ~
-0 -1 304
+0 -1 104
 S
-#306
+#106
 Entrance to the Grunting Boar Inn~
    You are standing in the entrance hall of the Grunting Boar Inn.  The hall
 has been wisely decorated with simple but functional furniture.  A small
@@ -199,19 +199,19 @@ D1
 Surprise! You see the bar.
 ~
 ~
-0 -1 307
+0 -1 107
 D3
 You see the temple square.
 ~
 ~
-0 -1 305
+0 -1 105
 D4
 You see the reception room.
 ~
 ~
-0 -1 308
+0 -1 108
 S
-#307
+#107
 The Grunting Boar~
    You are standing in the bar.  The bar is set against the northern wall, old
 archaic writing, carvings and symbols cover its top.  A fireplace is built into
@@ -224,7 +224,7 @@ D3
 You see the exit to the entrance hall.
 ~
 ~
-0 -1 306
+0 -1 106
 E
 sign~
 The sign reads:
@@ -240,7 +240,7 @@ Although it is very hard to understand, you think it looks a lot like beer,
 poems about beer, and small beer-mugs.
 ~
 S
-#308
+#108
 The Reception~
    You are standing in the reception.  The staircase leads down to the
 entrance hall.  There is a small sign on the counter.
@@ -250,7 +250,7 @@ D5
 You see the entrance hall.
 ~
 ~
-0 -1 306
+0 -1 106
 E
 sign~
 Rooms are expensive but good!  You may:
@@ -265,7 +265,7 @@ Rooms are expensive but good!  You may:
                 WE WON'T THINK TWICE BEFORE KICKING YOU OUT.
 ~
 S
-#309
+#109
 The Bakery~
    You are standing inside the small bakery.  A sweet scent of Danish and
 fine bread fills the room.  The bread and Danish are arranged in fine order
@@ -277,7 +277,7 @@ D2
 You see the main street.
 ~
 ~
-0 -1 313
+0 -1 113
 E
 danish pastry~
 You see that this is truly delicious pastry.  Must be made by a Dane from
@@ -297,7 +297,7 @@ Free instructions provided by the store:
           his bakery.
 ~
 S
-#310
+#110
 The General Store~
    You are inside the general store.  All sorts of items are stacked on shelves
 behind the counter, safely out of your reach.
@@ -308,7 +308,7 @@ D2
 You see the main street.
 ~
 ~
-0 -1 315
+0 -1 115
 E
 note~
 The note reads:
@@ -320,7 +320,7 @@ The note reads:
   Sell  - Sell an item.
 ~
 S
-#311
+#111
 The Weapon Shop~
    You are inside the weapon shop.  There is a small note on the counter.
 ~
@@ -329,7 +329,7 @@ D2
 You see the main street.
 ~
 ~
-0 -1 316
+0 -1 116
 E
 note~
 The note reads:
@@ -341,7 +341,7 @@ The note reads:
   Sell  - Sell an item.
 ~
 S
-#312
+#112
 Main Street~
    You are at the end of the main street of Midgaard.  South of here is the
 entrance to the Guild of Magic Users.  The street continues east towards the
@@ -353,24 +353,24 @@ D0
 You see the magic shop.
 ~
 ~
-0 -1 333
+0 -1 133
 D1
 You see the main street.
 ~
 ~
-0 -1 313
+0 -1 113
 D2
 You see the entrance to the Guild of Magic Users.
 ~
 ~
-0 -1 317
+0 -1 117
 D3
 You see the city gate.
 ~
 ~
-0 -1 340
+0 -1 140
 S
-#313
+#113
 Main Street~
    You are on the main street passing through the City of Midgaard.  South of
 here is the entrance to the Armory, and the bakery is to the north.  East of
@@ -381,24 +381,24 @@ D0
 You see the bakery.
 ~
 ~
-0 -1 309
+0 -1 109
 D1
 You see the market square.
 ~
 ~
-0 -1 314
+0 -1 114
 D2
 You see the armory.
 ~
 ~
-0 -1 320
+0 -1 120
 D3
 You see the main street.
 ~
 ~
-0 -1 312
+0 -1 112
 S
-#314
+#114
 Market Square~
    You are standing on the market square, the famous Square of Midgaard.
 A large, peculiar looking statue is standing in the middle of the square.
@@ -410,29 +410,29 @@ D0
 You see the temple square.
 ~
 ~
-0 -1 305
+0 -1 105
 D1
 You see the main street.
 ~
 ~
-0 -1 315
+0 -1 115
 D2
 You see the common square.
 ~
 ~
-0 -1 325
+0 -1 125
 D3
 You see the main street.
 ~
 ~
-0 -1 313
+0 -1 113
 
 E
 statue~
 What you see is the Midgaard Worm, stretching around the Palace of Midgaard.
 ~
 S
-#315
+#115
 The Main Street~
    You are on the main street crossing through town.  To the north is the
 general store, and the main street continues east.  To the west you see and
@@ -443,19 +443,19 @@ D0
 You see the general store.
 ~
 ~
-0 -1 310
+0 -1 110
 D1
 You see the main street.
 ~
 ~
-0 -1 316
+0 -1 116
 D3
 You see the market square.
 ~
 ~
-0 -1 314
+0 -1 114
 S
-#316
+#116
 The Main Street~
    The main street, to the north is the weapon shop and to the south is the
 Guild of Swordsmen.  To the east you leave town and to the west the street
@@ -466,24 +466,24 @@ D0
 You see the weapon shop.
 ~
 ~
-0 -1 311
+0 -1 111
 D1
 You see the city gate.
 ~
 ~
-0 -1 341
+0 -1 141
 D2
 You see the swordpeople's guild.
 ~
 ~
-0 -1 321
+0 -1 121
 D3
 You see the main street leading to the market square.
 ~
 ~
-0 -1 315
+0 -1 115
 S
-#317
+#117
 Entrance to Mage's Guild~
    The entrance hall is a small, poor lighted room.
 ~
@@ -492,14 +492,14 @@ D0
 You see the main street.
 ~
 ~
-0 -1 312
+0 -1 112
 D2
 You see your favorite place, the Mage's Bar.
 ~
 ~
-0 -1 318
+0 -1 118
 S
-#318
+#118
 Mage's Bar~
    The bar is one of the wierdest in the land.  Mystical images float around
 the air.  Illusions of fine furniture appear all around the room.
@@ -509,14 +509,14 @@ D0
 You see the lobby.
 ~
 ~
-0 -1 317
+0 -1 117
 D1
 You see the laboratory.
 ~
 ~
-0 -1 319
+0 -1 119
 S
-#319
+#119
 Mage's Laboratory~
    This is the Magical Experiments Laboratory.  Dark smoke-stained stones
 arch over numerous huge oaken tables, most of these cluttered with strange-
@@ -531,7 +531,7 @@ D3
 You see the bar.
 ~
 ~
-0 -1 318
+0 -1 118
 D5
 You can't see what is down there, it is too dark.  Looks like it would be
 impossible to climb back up.
@@ -539,7 +539,7 @@ impossible to climb back up.
 ~
 0 -1 7017
 S
-#320
+#120
 The Armory~
    The armory with all kinds of armors on the walls and in the window.  You
 see helmets, shields and chain mails.  To the north is the main street.
@@ -550,7 +550,7 @@ D0
 You see the main street.
 ~
 ~
-0 -1 313
+0 -1 113
 E
 note~
   You can use these commands for trading:
@@ -562,7 +562,7 @@ note~
 
 ~
 S
-#321
+#121
 Entrance Hall to the Guild of Swordspeople~
    The entrance hall to the Guild of Swordspeople.  A place where one has to be
 careful not to say something wrong (or right).  To the east is the bar and to
@@ -573,14 +573,14 @@ D0
 You see the main street.
 ~
 ~
-0 -1 316
+0 -1 116
 D1
 You see the swordspeople's bar, many noises comes from there.
 ~
 ~
-0 -1 322
+0 -1 122
 S
-#322
+#122
 The Bar of Swordspeople~
    The bar of swordspeople, once upon a time beautifully furnished.  But now 
 the furniture is all around you in small pieces.  To the south is the yard, and
@@ -591,14 +591,14 @@ D2
 You see the practice yard.
 ~
 ~
-0 -1 323
+0 -1 123
 D3
 You see the entrance hall to the thieves' guild.
 ~
 ~
-0 -1 321
+0 -1 121
 S
-#323
+#123
 The Tournament and Practice Yard~
    The practice yard of the fighters.  To the north is the bar.  A well leads
 down into darkness.
@@ -608,7 +608,7 @@ D0
 You see the bar.
 ~
 ~
-0 -1 322
+0 -1 122
 D5
 You can't see what is down there, it is too dark.  Looks like it would be
 impossible to climb back up.
@@ -616,7 +616,7 @@ impossible to climb back up.
 ~
 0 -1 7048
 S
-#324
+#124
 Eastern End of Poor Alley~
    You are at the poor alley.  South of here is the Grubby Inn and to the
 east you see common square.  The alley continues further west.
@@ -626,19 +626,19 @@ D1
 You see the common square.
 ~
 ~
-0 -1 325
+0 -1 125
 D2
 You see the Inn.
 ~
 ~
-0 -1 348
+0 -1 148
 D3
 You see the poor alley.
 ~
 ~
-0 -1 344
+0 -1 144
 S
-#325
+#125
 The Common Square~
    The common square, people pass by, talking to each other.  To the west is
 the poor alley and to the east is the dark alley.  To the north, this square
@@ -649,24 +649,24 @@ D0
 You see the market square.
 ~
 ~
-0 -1 314
+0 -1 114
 D1
 You see the dark alley.
 ~
 ~
-0 -1 326
+0 -1 126
 D2
 You see the city dump.
 ~
 ~
-0 -1 330
+0 -1 130
 D3
 You see the poor alley.
 ~
 ~
-0 -1 324
+0 -1 124
 S
-#326
+#126
 The Dark Alley~
    The dark alley, to the west is the common square and to the south is the
 Guild of Thieves.  The alley continues east.
@@ -676,23 +676,23 @@ D1
 The alley continues east.
 ~
 ~
-0 -1 345
+0 -1 145
 D2
 You see the entrance to the thieves' guild.
 ~
 ~
-0 -1 327
+0 -1 127
 D3
 You see the common square.
 ~
 ~
-0 -1 325
+0 -1 125
 E
 guild~
 It is the thieves guild, don't enter if you care about your health or money.
 ~
 S
-#327
+#127
 Entrance Hall to the Guild of Thieves~
    The entrance hall to the thieves' and assassins' guild.  A place where you
 can lose both your life and your money, if you are not careful.  To the north
@@ -703,14 +703,14 @@ D0
 You see the alley.
 ~
 ~
-0 -1 326
+0 -1 126
 D1
 You see the thieves' bar, where everything disappears.
 ~
 ~
-0 -1 328
+0 -1 128
 S
-#328
+#128
 The Thieves' Bar~
    The bar of the thieves.  Once upon a time this place must have been 
 beautifully furnished, but now it seems almost empty.  To the south is the 
@@ -721,18 +721,18 @@ D2
 You see the secret yard.
 ~
 ~
-0 -1 329
+0 -1 129
 D3
 You see the entrance hall to the thieves' guild.
 ~
 ~
-0 -1 327
+0 -1 127
 E
 furniture~
 As you look at the scant remaining furniture, the chair you sit on disappears.
 ~
 S
-#329
+#129
 The Secret Yard~
    The secret practice yard of thieves and assassins.  To the north is the
 bar.  A well leads down into darkness.
@@ -742,7 +742,7 @@ D0
 You see the bar.
 ~
 ~
-0 -1 328
+0 -1 128
 D5
 You can't see what is down there, it is too dark.  Looks like it would be
 impossible to climb back up.
@@ -750,7 +750,7 @@ impossible to climb back up.
 ~
 0 -1 7043
 S
-#330
+#130
 The Dump~
    The dump, where the people from the city drop their garbage.  Through the
 garbage you can see a large junction of pipes, looks like the entrance to the
@@ -762,19 +762,19 @@ D0
 You see the common square.
 ~
 ~
-0 -1 325
+0 -1 125
 D2
 You see the entrance to the Zoo.  Numerous snorts and screeches can be heard.
 ~
 ~
-0 -1 356
+0 -1 156
 D5
 You see the sewers.
 ~
 ~
 0 -1 7030
 S
-#331
+#131
 The Pet Shop~
    The Pet Shop is a small crowded store, full of cages and animals of
 various sizes.  There is a sign on the wall.
@@ -784,7 +784,7 @@ D0
 You see the main street.
 ~
 ~
-0 -1 315
+0 -1 115
 E
 sign~
 The sign reads:
@@ -805,7 +805,7 @@ The sign reads:
  The Shopkeeper
 ~
 S
-#332
+#132
 Pet Shop Store~
    This  is the small dark room in which the Pet shop keeps his pets.
 It is vital that this room's virtual number is exactly one larger
@@ -813,7 +813,7 @@ than the Pet Shop number.
 ~
 30 8 0
 S
-#333
+#133
 The Magic Shop~
    Behind the counter you see various items, neatly placed in racks,
 presumably most of them are magic.
@@ -823,9 +823,9 @@ D2
 You see the main street.
 ~
 ~
-0 -1 312
+0 -1 112
 S
-#340
+#140
 Inside the West Gate of Midgaard~
    You are by two small towers that have been built into the city wall and
 connected with a footbridge across the heavy wooden gate.  Main Street leads
@@ -836,18 +836,18 @@ D1
 You see Main Street.
 ~
 ~
-0 -1 312
+0 -1 112
 D2
 You see the road running along the inner side of the city wall.  You notice
 that it is called Wall Road.
 ~
 ~
-0 -1 342
+0 -1 142
 D3
 The city gate is to the west.
 ~
 gate~
-1 3133 352
+1 1133 152
 E
 bridge footbridge~
 It is too high up to reach but it looks as if one easily could walk across it
@@ -870,7 +870,7 @@ It is built from large grey rocks that have been fastened to each other with
 some kind of mortar.  It is far too high to climb.
 ~
 S
-#341
+#141
 Inside the East Gate of Midgaard~
    You are by two small towers that have been built into the city wall and
 connected with a footbridge across the heavy wooden gate.  Main Street leads
@@ -885,11 +885,11 @@ D1
 You see the city gate.
 ~
 gate~
-1 3133 353
+1 1133 153
 D3
 You see Main Street.~
 ~
-0 -1 316
+0 -1 116
 E
 bridge footbridge~
 It is too high up to reach but it looks as if one easily could walk across it
@@ -912,7 +912,7 @@ It is built from large grey rocks that have been fastened to each other with
 some kind of mortar.  It is far too high to climb.
 ~
 S
-#342
+#142
 Wall Road~
    You are walking next to the western city wall.  The road continues further
 south and the city gate is just north of here.
@@ -922,874 +922,16 @@ D0
 You see the city gate.
 ~
 ~
-0 -1 340
+0 -1 140
 D2
 The road continues further south.
 ~
 ~
-0 -1 343
+0 -1 143
 E
 wall~
 It is built from large grey rocks that have been fastened to each other with
 some kind of mortar.  It is far too high to climb.
 ~
-S
-#343
-Wall Road~
-   You are walking next to the western city wall.  Wall Road continues further
-north and south.  A small, poor alley leads east.  A huge tower stands to the 
-west.
-Some letters have been written on the wall here.
-~
-30 0 1
-D0
-The road continues further north.
-~
-~
-0 -1 342
-D1
-The alley leads east.
-~
-~
-0 -1 344
-D2
-The road continues further south.
-~
-~
-0 -1 347
-D3
-The ivory tower stands to the west
-~
-~
-0 -1 1499
-E
-letters~
-They read ' Try Milliways, the Restaurant at the End of the Universe. '
-~
-E
-wall~
-It is built from large grey rocks that have been fastened to each other with
-some kind of mortar.  It is far too high to climb.
-~
-S
-#344
-Poor Alley~
-   You are in the poor alley, which continues further east. You see the
-city wall to the west.
-~
-30 0 1
-D1
-The alley leads east.
-~
-~
-0 -1 324
-D3
-The alley leads west.
-~
-~
-0 -1 343
-S
-#345
-Alley at Levee~
-   You are standing in the alley which continues east and west.  South of
-here you see the levee.
-~
-30 0 1
-D1
-The alley leads east.
-~
-~
-0 -1 346
-D2
-You see the levee.
-~
-~
-0 -1 349
-D3
-The alley leads west.
-~
-~
-0 -1 326
-S
-#346
-Eastern end of Alley~
-   You are standing at the eastern end of the alley, the city wall is just
-east, blocking any further movement.  A small warehouse is directly south of
-here.
-~
-30 0 1
-D2
-You see the warehouse.
-~
-~
-0 -1 350
-D3
-You see the alley.
-~
-~
-0 -1 345
-S
-#347
-Wall Road~
-   You are standing on the road next to the western city wall, which
-continues north.  South of here is a bridge across the river.
-~
-30 0 1
-D0
-You see the road.
-~
-~
-0 -1 343
-D2
-You see the bridge.
-~
-~
-0 -1 351
-E
-wall~
-It is built from large grey rocks that have been fastened to each other with
-some kind of mortar.  It is far too high to climb.
-~
-S
-#348
-Grubby Inn~
-   You are inside the old Grubby Inn.  This place has not been cleaned for
-several decades, the vile smells make you dizzy.
-~
-30 8 0
-D0
-You see the alley.
-~
-~
-0 -1 324
-S
-#349
-Levee~
-  You are at the levee.  South of here you see the river gently flowing west.
-The river bank is very low making it possible to enter the river.
-~
-30 16 1
-D0
-You see the Alley.
-~
-~
-0 -1 345
-D2
-You see the river flowing west.
-~
-~
-0 -1 3203
-S
-#350
-Warehouse~
-   You are inside the warehouse.  The room is decorated with various old
-items from ships.
-~
-30 8 0
-D0
-You see the Alley.
-~
-~
-0 -1 346
-S
-#351
-On the Bridge~
-   You are standing on the stone bridge crosses the river.  The bridge is
-built out from the western city wall and the river flows west through an
-opening in the wall ten feet below the bridge.
-~
-30 0 1
-D0
-You see the road.
-~
-~
-0 -1 347
-D2
-You see the Concourse.
-~
-~
-0 -1 3100
-E
-bridge~
-It is built from large grey rocks that have been fastened to each other with
-some kind of mortar, just like the wall.
-~
-E
-opening~
-You cannot really see it from here as it is somewhere beneath your feet.
-~
-E
-wall~
-It is built from large grey rocks that have been fastened to each other with
-some kind of mortar.  It is far too high to climb.
-~
-S
-#352
-Outside the West Gate of Midgaard~
-   You are by two small towers that have been built into the city wall and
-connected with a footbridge across the heavy wooden gate.  To the west you
-can see the edge of a big forest.  A small path leads north.
-~
-30 0 1
-D0
-You see a path leading along the side of the city.
-~
-~
-0 -1 50
-D1
-The city gate is to the east.
-~
-gate~
-1 3133 340
-D3
-The forest edge is to the west.
-~
-~
-0 -1 6000
-E
-bridge footbridge~
-It is too high up to reach but it looks as if one easily could walk across it
-from one tower to the other.
-~
-E
-gate~
-It is a set of very big double doors made from hard wood.  They have been
-reinforced with large iron bands to make them even more sturdy.  One of the
-doors is equipped with a very big lock.
-~
-E
-tower towers~
-Both of the towers are built from large grey rocks that have been fastened to
-each other with some kind of mortar, just like the city wall.
-~
-E
-wall~
-It is built from large grey rocks that have been fastened to each other with
-some kind of mortar.  It is far too high to climb.
-~
-S
-#353
-Outside the East Gate of Midgaard~
-   You are by two small towers that have been built into the city wall and
-connected with a footbridge across the heavy wooden gate.  To the east the
-plains stretch out in the distance.  A small path leads north
-~
-30 0 1
-D0
-You see a path stretching northward
-~
-~
-0 -1 58
-D1
-You see the plains.~
-~
-0 -1 3503
-D3
-You see the city gate.
-~
-gate~
-1 3133 341
-E
-bridge footbridge~
-It is too high up to reach but it looks as if one easily could walk across it
-from one tower to the other.
-~
-E
-gate~
-It is a set of very big double doors made from hard wood.  They have been
-reinforced with large iron bands to make them even more sturdy.  One of the
-doors is equipped with a very big lock.
-~
-E
-tower towers~
-Both of the towers are built from large grey rocks that have been fastened to
-each other with some kind of mortar, just like the city wall.
-~
-E
-wall~
-It is built from large grey rocks that have been fastened to each other with
-some kind of mortar.  It is far too high to climb.
-~
-S
-#354
-By the Temple Altar~
-   You are by the temple altar in the northern end of the Temple of Midgaard.
-A huge altar made from white polished marble is standing in front of you and
-behind it is a ten foot tall sitting statue of Odin, the King of the Gods.
-~
-30 1032 0
-D2
-You see the southern end of the temple.
-~
-~
-0 -1 98
-D4
-The Tower of Rules Stretches above you.
-~
-~
-0 -1 2640
-E
-altar~
-Even though the altar is more than ten feet long it appears to be made from a
-single block of white virgin marble.
-~
-E
-statue Odin king god~
-The statue represents the one-eyed Odin sitting on a his throne.  He has
-long, grey hair and beard and a strict look on his face.  On top of the
-throne, just above his shoulders, his two ravens Hugin and Munin are sitting
-and at his feet are his wolves Gere and Freke.
-~
-S
-#355
-Odin's Store~
-   This is the small dark room in which Odin keeps the player items that he
-takes care of.  It is vital that this room's virtual number is exactly one
-larger than the room by the temple altar.
-~
-30 8 0
-S
-#356
-Midgaard Zoo~
-   This zoo has been furnished for the use and abuse of the more
-bloodthirsty citizens of Midgaard. You can see the petting zoo to the
-east, there is a path to the south, the Nursery is to the west and the 
-dump is to the north.
-~
-30 0 1
-D0
-The Dump.
-~
-~
-0 -1 330
-D1
-The petting zoo.
-~
-~
-0 -1 357
-D2
-Zoo Path.
-~
-~
-0 -1 358
-D3
-Nursery
-~
-~
-0 -1 359
-S
-#357
-Petting Zoo~
-   Lots of soft and furry animals live here!  You can leave to the west.
-~
-30 0 1
-D3
-Zoo entrance.
-~
-~
-0 -1 356
-S
-#358
-Zoo path~
-   This path, made of rich mulch, winds through the Zoo.  To the left and
-right you can see cute (and not so cute) little animals.  To the east is the 
-petting zoo, to the west the Nursery, and to the north the zoo entrance. To
-the south the path continues.
-~
-30 0 1
-D0
-The Zoo entrance.
-~
-~
-0 -1 356
-D1
-The petting zoo.
-~
-~
-0 -1 357
-D2
-New Annex Zone.
-~
-~
-0 -1 360
-D3
-The Nursery.
-~
-~
-0 -1 359
-S
-#359
-Nursery~
-  A nursery for all of the little animals!  They are so cute!  Even the
-dangerous ones are cute!
-~
-30 0 1
-D1
-Zoo entrance
-~
-~
-0 -1 356
-S
-#360
-Zoo path~
-   Made of cedar chips, this path leads north and south through the
-Zoo.  To the east you can see the Aviary, and to the west you can see the
-Canine exhibit.
-~
-30 0 2
-D0
-Zoo path
-~
-~
-0 -1 358
-D1
-Aviary
-~
-~
-0 -1 361
-D2
-Zoo Annex
-~
-~
-0 -1 367
-D3
-Canine Exhibit
-~
-~
-0 -1 364
-S
-#361
-Aviary~
-   A large Aviary is here, containing birds of all sorts.  They can be
-dangerous in groups, so watch out!.
-~
-30 0 1
-D1
-Aviary
-~
-~
-0 -1 362
-D3
-The New Annex Path
-~
-~
-0 -1 360
-S
-#362
-Aviary~
-   An Aviary is being built here. Looks like it will be a wonderful place.
-They haven't finished yet, but you can go east and west.
-~
-30 0 1
-D1
-Aviary
-~
-~
-0 -1 363
-D3
-Aviary
-~
-~
-0 -1 361
-S
-#363
-Aviary~
-   An Aviary is being built here. Looks like it will be a wonderful place.
-They haven't finished yet, you can go west.
-~
-30 0 1
-D3
-Aviary
-~
-~
-0 -1 362
-S
-#364
-Canine Exhibit~
-   This is where the canines are.  You can almost the loud barks.  You can go
-east and west from here.
-~
-30 0 1
-D1
-The New Annex Path
-~
-~
-0 -1 360
-D3
-Canine Exhibit
-~
-~
-0 -1 365
-S
-#365
-Canine Exhibit~
-   This is where the canines will go.  You can almost hear the barks.
-You can go east or west.
-~
-30 0 1
-D1
-Canine Exhibit
-~
-~
-0 -1 364
-D3
-Canine Exhibit
-~
-~
-0 -1 366
-S
-#366
-Canine Exhibit~
-   This is where the canines will go.  You can almost hear the barks.
-You can go east.
-~
-30 0 1
-D1
-Canine Exhibit
-~
-~
-0 -1 365
-S
-#367
-New Annex Path~
-   You see more exhibits, insects to the east, monkeys to the south, and 
-the path continues to the west.  You note that some of it is still under
-contruction.
-~
-30 0 1
-D0
-The New Annex Path
-~
-~
-0 -1 360
-D1
-Insect exhibit
-~
-~
-0 -1 368
-D2
-Primate exhibit
-~
-~
-0 -1 371
-D3
-Zoo path
-~
-~
-0 -1 374
-S
-#368
-Insect Exhibit~
-   This is where the fascinating insect exhibit is.  Truly amazing...
-You can go east or west.
-~
-30 0 1
-D1
-Insect Exhibit
-~
-~
-0 -1 369
-D3
-New Annex path
-~
-~
-0 -1 367
-S
-#369
-Insect Exhibit~
-   This is where the fascinating insect exhibit is.  Truly amazing...
-You can go east or west.
-~
-30 0 1
-D1
-Insect Exhibit
-~
-~
-0 -1 370
-D3
-Insect Exhibit 
-~
-~
-0 -1 368
-S
-#370
-Insect Exhibit~
-   This is where the fascinating insect exhibit is.  Truly amazing...
-You can go west.
-~
-30 0 1
-D3
-Insect Exhibit 
-~
-~
-0 -1 369
-S
-#371
-Primate Exhibit~
-   Monkeys, baboons, gorillas, a bit of everything.  You can go north 
-or south.
-~
-30 0 1
-D0
-New Annex Path.
-~
-~
-0 -1 367
-D2
-Primate Exhibit 
-~
-~
-0 -1 372
-S
-#372
-Primate Exhibit~
-   Monkeys, baboons, gorillas, a bit of everything.  You can go north
-or south.
-~
-30 0 1
-D0
-Primate Exhibit
-~
-~
-0 -1 371
-D2
-Primate Exhibit 
-~
-~
-0 -1 373
-S
-#373
-Primate Exhibit~
-   Monkeys, baboons, gorillas, a bit of everything.  You can go north.
-~
-30 0 1
-D0
-Primate Exhibit 
-~
-~
-0 -1 372
-S
-#374
-E-W Path~
-  The path goes east and west, and to the south is the reptile exhibit.
-To the north, you can see the wall of the canine exhibit.
-~
-30 0 1
-D1
-New Annex Path
-~
-~
-0 -1 367
-D2
-Reptile exhibit
-~
-~
-0 -1 375
-D3
-E-W path
-~
-~
-0 -1 378
-S
-#375
-Reptile Exhibit~
-   This is where the reptiles are kept.  You can go north or south.
-~
-30 0 1
-D0
-You see a path through the zoo.
-~
-~
-0 -1 374
-D2
-You see the next section of the reptile exhibit.
-~
-~
-0 -1 376
-S
-#376
-Reptile Exhibit~
-   This is where the reptiles are kept.  You can go north or south.
-~
-30 0 1
-D0
-You see a path through the zoo.
-~
-~
-0 -1 375
-D2
-You see the next section of the reptile exhibit.
-~
-~
-0 -1 377
-S
-#377
-Reptile Exhibit~
-   This is where the reptiles are kept.  You can go north.
-~
-30 0 1
-D0
-You see a path through the Exhibit
-~
-~
-0 -1 376
-S
-#378
-E-W path~
-  To the south you see the Bear exhibit.  To the east and west you see
-paths
-~
-30 0 1
-D1
-E-W Path
-~
-~
-0 -1 374
-D2
-Bear Exhibit
-~
-~
-0 -1 379
-D3
-E-W path
-~
-~
-0 -1 382
-S
-#379
-Bear Exhibit~
-   There are bears here.  You can north or south.
-~
-30 0 1
-D0
-You see the path
-~
-~
-0 -1 378
-D2
-You see the bear exhibit
-~
-~
-0 -1 380
-S
-#380
-Bear Exhibit~
-   There are bears here.  You can north or south.
-~
-30 0 1
-D0
-You see the path through the bear exhibit.
-~
-~
-0 -1 379
-D2
-You see the bear exhibit
-~
-~
-0 -1 381
-S
-#381
-Bear Exhibit~
-   There are bears here.   You can north.
-~
-30 0 1
-D0
-You see the path through the bear exhibit.
-~
-~
-0 -1 380
-S
-#382
-E-W path~
-   The Feline exhibit is to the south.  To the north, you can hear the
-yapping of dogs.  The path goes east to west
-~
-30 0 1
-D1
-You see the path
-~
-~
-0 -1 378
-D2
-You see the Feline exhibit.
-~
-~
-0 -1 383
-D3
-You see the path
-~
-~
-0 -1 386
-S
-#383
-Feline Exhibit~
-    This is where the great cats are.  They are fierce, and mighty
-fighters.  The only exits are north, and south.
-~
-30 0 1
-D0
-You see the path
-~
-~
-0 -1 382
-D2
-You can see another section of the feline exhibit.
-~
-~
-0 -1 384
-S
-#384
-Feline Exhibit~
-    This is where the great cats are.  They are fierce, and mighty
-fighters.  You can go north, or south.
-~
-30 0 1
-D0
-You see the entrance to the Feline Exhibit.
-~
-~
-0 -1 383
-D2
-You see another section of the Feline Exhibit
-~
-~
-0 -1 385
-S
-#385
-Feline Exhibit~
-    This is where the great cats are.  They are fierce, and mighty
-fighters.  The only exit is north.
-~
-30 0 1
-D0
-You see another section of the feline exhibit.
-~
-~
-0 -1 384
-S
-#386
-End of Path~
-   You have come to western end of the path. To the west, you can see a 
-bolted and barred door.  A sign on the door reads: 
-
-                          WARNING:  
-                     Proceeding into the
-                 Dangerous Creatures Exhibit 
-                   can be HIGHLY dangerous. 
-            WE MEAN IT.  ZOO WILL NOT BE HELD LIABLE
-               FOR ANY DEATHS OR DISMEMBERMENTS
-~
-30 0 1
-D1
-You can see the path to the east
-
-~
-~
-0 -1 382
-D3
-You can see the Deadly Creatures Exhibit
-~
-~
-1 10000 10000
 S
 $~

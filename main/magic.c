@@ -1700,7 +1700,7 @@ void spell_word_of_recall(byte UNUSED(level), struct char_data *UNUSED(ch),
 #ifndef ESP_TINY_WORLD
     location = 3001;
 #else
-    location = 301;
+    location = 101;
 #endif
   }
 

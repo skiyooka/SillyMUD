@@ -456,7 +456,7 @@ int special(struct char_data *ch, const char *cmd, char *arg) {
 #ifndef ESP_TINY_WORLD
     char_to_room(ch, 3001);
 #else
-    char_to_room(ch, 301);
+    char_to_room(ch, 101);
 #endif
     return (0);
   }
@@ -1848,8 +1848,8 @@ void nanny(struct descriptor_data *d, char *arg) {
         char_to_room(d->character, 3001);
         d->character->player.hometown = 3001;
 #else
-        char_to_room(d->character, 301);
-        d->character->player.hometown = 301;
+        char_to_room(d->character, 101);
+        d->character->player.hometown = 101;
 #endif
 
         d->character->specials.tick = plr_tick_count++;
@@ -2026,8 +2026,8 @@ void nanny(struct descriptor_data *d, char *arg) {
               char_to_room(d->character, 3001);
               d->character->player.hometown = 3001;
 #else
-              char_to_room(d->character, 301);
-              d->character->player.hometown = 301;
+              char_to_room(d->character, 101);
+              d->character->player.hometown = 101;
 #endif
             }
           }
@@ -2064,8 +2064,8 @@ void nanny(struct descriptor_data *d, char *arg) {
           char_to_room(d->character, 3001);
           d->character->player.hometown = 3001;
 #else
-          char_to_room(d->character, 301);
-          d->character->player.hometown = 301;
+          char_to_room(d->character, 101);
+          d->character->player.hometown = 101;
 #endif
         }
       }
