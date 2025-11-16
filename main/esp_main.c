@@ -180,5 +180,5 @@ void app_main() {
 
     fat_initialize();
 
-    // real_main(0, NULL); // mud main
+    real_main(0, NULL); // mud main
 }

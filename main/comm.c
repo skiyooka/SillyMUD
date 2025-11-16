@@ -186,7 +186,10 @@ int real_main(int argc, char **argv) {
   if (daemon_mode) {
     run_as_daemon();
   } else {
+#ifndef ESP_PLATFORM
+    // on esp32, this stops all output and disables the console
     close(STDIN_FILENO);
+#endif
   }
 
 #ifndef ESP_PLATFORM
